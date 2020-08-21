@@ -7,8 +7,10 @@
            margin-left: 180px;
        }
        #photo{
-           width: 1050px;
-           height: 1000px;
+           width: 850px;
+           height: 800px;
+           border-radius: 1010px;
+           
        }
        #image1{
            width: 1100px;
@@ -39,7 +41,7 @@
                     <div class="col-lg-12">
                         <div class="section-tittle text-center">
                             <span>Our Recent news</span>
-                            <h2>Tourist Blog</h2>
+                            <h2>{{object.name}}</h2>
                         </div>
                     </div>
                 </div>
@@ -48,14 +50,16 @@
                     <div class="">
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
-                                <div class="blog-img">
+                                <div class="">
                                     <img src="{{object.photo.url}}" id="photo">
                                 </div>
                                 
                            
-                            <h3>{{object.name}}</h3>
-                                <br><p>{{object.description}}</p>
-                                <br><h5>{{object.text}}</h5>
+                            
+                                <br><h6><strong>{{object.description}}</strong></h6>
+                                <br>
+
+                                <br><h5>"  {{object.text}} "</h5>
                                 <br>
                                 <div class="blog-img">
                                     {% if object.image1 %}
